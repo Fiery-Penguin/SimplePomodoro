@@ -3,7 +3,7 @@ from playsound import playsound  # For playing the alarm sounds
 import time  # For sleeping
 
 # Set up the progress bar characters
-barChar = "⣿"
+barChar = "⣿---"
 progressChar = "█"
 
 # Set the work and rest times in minutes
