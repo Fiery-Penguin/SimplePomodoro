@@ -43,7 +43,7 @@ def renderProgressBar(message, currentTime, fullTime, colour):
     windowWidth = os.get_terminal_size()[0]
     barWidth = windowWidth - len(message) - len(progressString) - 2
     progressWidth = int(barWidth * progress)
-    timerStart = int(barWidth / 2 - (len(timer) / 2))
+    timerStart = 1+int(barWidth / 2 - (len(timer) / 2))
 
     # === Draw the progress bar ===
     bar = barChar * barWidth + " " + progressString  # build the initial bar
