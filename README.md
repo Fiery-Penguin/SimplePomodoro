@@ -8,6 +8,6 @@ The script only has a single dependency: `playsound`. Which is used to... you kn
 Just `git clone https://github.com/Fiery-Penguin/SimplePomodoro `and `pip install playsound` to get the dependency if it's not already installed and you should be good to go. don't spend too much time on all this, go get some work done
 
 ### TO DO
-- Center the timer correctly
-- Add option to include or exclude features
-- Add option to only stop playing the sound once user has interacted with the program
+- [x] Center the timer correctly
+- [ ] Add option to include or exclude features
+- [ ] Add option to only stop playing the sound once user has interacted with the program
