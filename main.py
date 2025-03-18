@@ -81,7 +81,7 @@ while True:  # Loop indefinitely
 
     # Play the alarm sound to indicate that the timer has run out
     renderProgressBar("│[Working]", currentTime, workTimeS, "\033[1;34m")
-    playsound(bells)
+    playsound(bells, False)
 
     currentTime = restTimeS
 
@@ -95,4 +95,4 @@ while True:  # Loop indefinitely
 
     # Play the alarm sound to indicate that the timer has run out
     renderProgressBar("│[Resting]", currentTime, restTimeS, "\033[1;31m")
-    playsound(bells)
+    playsound(bells, False)
