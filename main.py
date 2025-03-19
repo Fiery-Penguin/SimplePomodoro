@@ -2,6 +2,8 @@ import os  # For use in locating paths
 from playsound import playsound  # For playing the alarm sounds
 import time  # For sleeping
 
+# ======================== C O N F I G U R A T I O N ======================== #
+
 # Set up the progress bar characters
 barChar = "⣿"
 progressChar = "█"
@@ -10,6 +12,8 @@ progressChar = "█"
 prepTime = 2
 workTime = 50  # minutes
 restTime = 10  # minutes
+
+# =========================================================================== #
 
 # Convert the minutes for work and rest into seconds
 second = 60  # minutes
