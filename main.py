@@ -7,12 +7,15 @@ barChar = "⣿"
 progressChar = "█"
 
 # Set the work and rest times in minutes
+prepTime = 2
 workTime = 50  # minutes
 restTime = 10  # minutes
 
 # Convert the minutes for work and rest into seconds
-workTimeS = workTime * 60
-restTimeS = restTime * 60
+second = 60  # minutes
+prepTimeS = prepTime * second
+workTimeS = workTime * second
+restTimeS = restTime * second
 
 # Initiate the session counter (not used)
 session = 1
@@ -43,7 +46,7 @@ def renderProgressBar(message, currentTime, fullTime, colour):
     windowWidth = os.get_terminal_size()[0]
     barWidth = windowWidth - len(message) - len(progressString) - 2
     progressWidth = int(barWidth * progress)
-    timerStart = 1+int(barWidth / 2 - (len(timer) / 2))
+    timerStart = 1 + int(barWidth / 2 - (len(timer) / 2))
 
     # === Draw the progress bar ===
     bar = barChar * barWidth + " " + progressString  # build the initial bar
@@ -65,6 +68,20 @@ def renderProgressBar(message, currentTime, fullTime, colour):
     print(colour + top)
     print(bar)  # Write the bar to the screen
     print(bottom + "\033[1;00m")
+
+
+# Get ready timer
+currentTime = prepTimeS
+for i in range(prepTimeS):
+    # Call the render progress bar function
+    renderProgressBar("│[Preparing]", currentTime, prepTimeS, "\033[1;32m")
+
+    # Sleep for one second and count decrement the current time by one
+    time.sleep(1)
+    currentTime -= 1
+
+# Play the alarm sound to indicate that the timer has run out
+playsound(bells, False)
 
 
 while True:  # Loop indefinitely
