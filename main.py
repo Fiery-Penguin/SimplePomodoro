@@ -9,7 +9,7 @@ barChar = "⣿"
 progressChar = "█"
 
 # Set the work and rest times in minutes
-prepTime = 10
+prepTime = 10  # minutes
 workTime = 40  # minutes
 restTime = 10  # minutes
 
@@ -28,7 +28,7 @@ session = 1
 path = os.path.dirname(__file__)  # Get the path to the project root
 
 # Define the path to the alarm sound
-bells = os.path.join(path, "Pomodoro Alarm Bells.mp3")  
+bells = os.path.join(path, "Pomodoro Alarm Bells.mp3")
 
 
 # The rendering function
